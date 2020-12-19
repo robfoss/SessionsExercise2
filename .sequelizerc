@@ -1,4 +1,4 @@
-use strict';
+'use strict';
 
 require('dotenv').config();    // don't forget to require dotenv
 const path = require('path');

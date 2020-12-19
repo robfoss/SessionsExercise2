@@ -40,7 +40,11 @@ app.use(helmet());
 // Parse any form data from POST requests
 app.use(express.urlencoded({extended: true}));
 
+const {
+    homeRouter,
+} = require('./routers');
 
+app.use('/', homeRouter);
 
 
 
