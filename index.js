@@ -42,9 +42,17 @@ app.use(express.urlencoded({extended: true}));
 
 const {
     homeRouter,
+    loginRouter,
+    registerRouter
 } = require('./routers');
+const { layout } = require('./utils');
 
 app.use('/', homeRouter);
+
+app.get('/login', loginRouter);
+app.use('/register', registerRouter);
+
+
 
 
 

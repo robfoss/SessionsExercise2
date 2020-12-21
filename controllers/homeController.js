@@ -23,10 +23,21 @@ const processLead =  async (req, res) => {
         console.log(newLead);
     } catch(err) {
         console.log(err);
-    }    
+    }
+    res.redirect('thankyou'); 
+}
+
+const thankYouPage = (req, res) => {
+    res.render('thankyou', {
+        locals: {
+            title: 'Thank You Page'
+        },
+        ...layout
+    });
 }
 
 module.exports = {
     homeController,
-    processLead
+    processLead,
+    thankYouPage
 }

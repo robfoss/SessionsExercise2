@@ -6,4 +6,6 @@ const homeController = require('../controllers/homeController');
 router.get('/', homeController.homeController);
 router.post('/', homeController.processLead);
 
+router.get('/thankyou', homeController.thankYouPage);
+
 module.exports = router;
